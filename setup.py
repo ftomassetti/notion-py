@@ -9,17 +9,20 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 reqs = parse_requirements("requirements.txt", session=False)
+print("REQS")
+for ir in reqs:
+    pass
 install_requires = [str(ir.req) for ir in reqs]
 
 setuptools.setup(
-    name="notion",
-    version="0.0.25",
-    author="Jamie Alexandre",
-    author_email="jamalex+python@gmail.com",
-    description="Unofficial Python API client for Notion.so",
+    name="notion-fork",
+    version="0.1.0",
+    author="Jamie Alexandre, Federico Tomassetti",
+    author_email="f.tomassetti@gmail.com",
+    description="Unofficial Python API client for Notion.so, Forked out of desperation",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/jamalex/notion-py",
+    url="https://github.com/ftomassetti/notion-py",
     install_requires=install_requires,
     include_package_data=True,
     packages=setuptools.find_packages(),
